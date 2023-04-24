@@ -59,19 +59,15 @@ export default function Home() {
           Create images with <span className={styles.titleColor}>DALLE 2</span>
         </h1>
         <p className={styles.description}>
-          <div className={styles.tooltip}>
-            ?
-            <span className={styles.tooltiptext}>
-              Get API Key at https://platform.openai.com/account/api-keys
-            </span>
-          </div>{" "}
+       
+         
           <input
             id="token"
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="API Key"
-          />
+          /> 
           <input
             id="prompt"
             type="text"
@@ -123,10 +119,8 @@ export default function Home() {
             );
           })}
         </div>
-        <br />
-        <br />
-        <br />
-        <div className="footer">Helper Text</div>
+<br/><br/><br/>
+        <div className="footer">Inobag 2023</div>
       </main>
     </div>
   );
