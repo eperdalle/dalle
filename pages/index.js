@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create DALLE 2 App</title>
+        <title>Create images with DALLE 2</title>
       </Head>
 
       <main className={styles.main}>
@@ -59,19 +59,25 @@ export default function Home() {
           Create images with <span className={styles.titleColor}>DALLE 2</span>
         </h1>
         <p className={styles.description}>
+          <div className={styles.tooltip}>
+            ?
+            <span className={styles.tooltiptext}>
+              Get API Key at https://platform.openai.com/account/api-keys
+            </span>
+          </div>{" "}
           <input
             id="token"
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="Bearer Token"
+            placeholder="API Key"
           />
           <input
             id="prompt"
             type="text"
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
-            placeholder="Prompt"
+            placeholder="Ex: Dog with Beard in space"
           />
           <input
             id="number"
@@ -84,7 +90,6 @@ export default function Home() {
           {"  "}
           <button onClick={getImages}>Get {number} Images</button>
         </p>
-        
         <br />
         <select
           className={styles.select}
@@ -104,7 +109,7 @@ export default function Home() {
         ) : (
           <></>
         )}
-        {loading && <p >Loading...</p>}
+        {loading && <p>Loading...</p>}
         <div className={styles.grid}>
           {results.map((result) => {
             return (
@@ -118,6 +123,10 @@ export default function Home() {
             );
           })}
         </div>
+        <br />
+        <br />
+        <br />
+        <div className="footer">Helper Text</div>
       </main>
     </div>
   );

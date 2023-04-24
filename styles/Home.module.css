@@ -26,14 +26,15 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  padding-bottom: 50px;
 }
 
 .titleColor {
-  color: #07d3da;
+  color: #fab700;
 }
 
 .title {
-  color: #ffe4c4;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -129,4 +130,44 @@
   padding: 2rem;
   background-color: #fad0e0;
   border-radius: 5px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted  #fab700;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size:medium;
+  background-color:  #fab700;
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+ 
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
