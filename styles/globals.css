@@ -42,6 +42,7 @@ button:hover {
 }
 
 select {
+  background-color: #fab700;
   border: none;
   padding:12px;
   height:45px;
@@ -53,13 +54,10 @@ select {
   /*background: #fff url("img/icon-select.png") no-repeat 90% 50%;*/
   /*box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);*/
   transition: 0.2s all;
-}
-
-select {
-  box-shadow: 1px 1px 4px #fad0e0;
-}
-
-select {
   border-bottom: 1px solid  #000000;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
+
+
 
