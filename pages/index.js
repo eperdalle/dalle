@@ -59,16 +59,15 @@ export default function Home() {
           Create images with <span className={styles.titleColor}>DALLE 2</span>
         </h1>
         <p className={styles.description}>
-       
-         
-          <input
+        <label> <a href="https://platform.openai.com/account/api-keys">?</a></label>
+           <input
             id="token"
             type="text"
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="API Key"
-          /> 
-          <input
+          />
+         <input
             id="prompt"
             type="text"
             value={prompt}
@@ -101,7 +100,7 @@ export default function Home() {
         </select>{" "}
         <br />
         {error ? (
-          <div className={styles.error}>Something went wrong. Try again.</div>
+          <div className={styles.error}>Make sure API key is correct. </div>
         ) : (
           <></>
         )}
@@ -119,9 +118,16 @@ export default function Home() {
             );
           })}
         </div>
-<br/><br/><br/>
-        <div className="footer">Inobag 2023</div>
+        <br />
+        <br />
+        <br />
+        <div className="footer">
+        DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
+        <br />
+       
+        </div>
       </main>
+      
     </div>
   );
 }

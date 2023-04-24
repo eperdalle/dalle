@@ -21,17 +21,14 @@
   align-items: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  padding-bottom: 50px;
-}
+ 
+
 
 .titleColor {
   color: #fab700;
 }
+
+ 
 
 .title {
   color: #000000;
